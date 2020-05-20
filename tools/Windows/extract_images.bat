@@ -7,16 +7,11 @@ SET unpkBin=unpackedBin
 SET eifsFolder=eifs
 SET bmpFolder=bmp
 
-if "%vbfFile%"=="" (
-	echo No VBF specified
-	EXIT /B 0
-)
-
+:: Cleaning Folder
 rmdir /Q /S %unpkDir%
+
 mkdir %unpkDir%
 
-call:unpack_vbf %vbfFile%
-EXIT /B %ERRORLEVEL%
 
 :unpack_vbf
 	echo Unpacking VBF... please wait
@@ -32,7 +27,7 @@ EXIT /B 0
 	echo Extracing zipped EIFs from binary.
 	echo. 
 	for %%a in ("%unpkDir%/%vbfFile%_section_1400000_*.bin") do (
-		imgparcer -u "%unpkDir%/%%a" -o "%unpkDir%/%unpkBin%"
+		imgparcer -u %unpkDir%/%%a -o %unpkDir%/%unpkBin%
 	)
 	call:extract_eifs
 EXIT /B 0
@@ -46,14 +41,16 @@ EXIT /B 0
 	echo Unzipping EIFs files... please wait.
 	echo. 
 	for %%a in ("*.zip") do (
-		tar.exe -xf "%%a" -C "../%eifsFolder%"
+		tar.exe -xf "%%a" -C ../%eifsFolder%
 	)
 	cd ../%eifsFolder%
 	echo Converting EIFs files to BMP... please wait.
 	echo. 
 	for %%a in ("*.eif") do (
-		eifviewer -u "%%a" -o "../%bmpFolder%/%%a.bmp"
+		eifviewer -u %%a -o ../%bmpFolder%/%%a.bmp
 	)
 	echo Done
 	echo.
 EXIT /B 0
+
+call:unpack_vbf %vbfFile%
