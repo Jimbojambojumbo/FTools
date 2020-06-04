@@ -68,12 +68,14 @@ public:
     int Export(const fs::path &out_path, const string& name_prefix = "");
     int Import(const fs::path &config_path);
     int SaveToFile(const fs::path &out_path);
-    int SaveToVector(const vector<uint8_t>& v); //TODO:
+    int SaveToVector(vector<uint8_t>& v);
 
     int GetItemsCount(enResType res_type);
     int GetItemData(enResType res_type, unsigned idx, vector<uint8_t>& bin_data);
     int AddItem();
     int DelItem();
+    int ReplaceItem(enResType res_type, unsigned idx, const vector<uint8_t>& bin_data,
+            uint32_t w=0, uint32_t h=0, uint8_t t=0);
 
 private:
 
