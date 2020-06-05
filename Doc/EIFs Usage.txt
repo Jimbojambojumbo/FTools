@@ -1,0 +1,18 @@
+Some documentation that explain where some EIF files are used (this is valid only for Ford Focus MK3.5 with LEVEL 3 IPC (restyle IPC)
+
+C34xMCA_TOAnim_10 		= Background at the end of the splash screen
+1CPicBackg_MCA 			= Full background when in Main menu.
+2EPicBackg_MCA 			= Middle+Right background when in Settings menu (always) and everywhere else but only when Show Vehicle is disabled.
+3FPicBackg_MCA 			= Middle side of the splitted view background.
+3GPicBackg_MCA 			= Right side of the splitted view background.
+DPicBackg_MCA  			= Left side of the splitted view background.
+DPicDevListShadow_MCA	= Shadow Animation Effect over DPicBackg_MCA.
+C34xMCA_130516_Bracket 	= Static Shadow Effect over DPicBackg_MCA after the DPicDevListShadow_MCA animation.
+C34xMCA_130516_Bckgnd_E = Like 2EPicBackg_MCA but without the delimiter, used during some Menu transitions.
+C34xMCA_130516_Bckgnd_F = Like 3FPicBackg_MCA, used during some Menu transitions.
+C34xMCA_130516_Bckgnd_G = Like DPicBackg_MCA, used during some Menu transitions.
+
+PureBlackBackground		= Apparently nothing that can be seen on Focus MK3.5
+C34xMCA_130516_G+Shadow = Apparently nothing that can be seen on Focus MK3.5
+DPicBackg_Anim_CS		= Apparently nothing that can be seen on Focus MK3.5
+2EPicBackgHSI_CS		= Apparently nothing that can be seen on Focus MK3.5
