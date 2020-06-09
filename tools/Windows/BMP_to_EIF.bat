@@ -10,7 +10,7 @@ EXIT /B %ERRORLEVEL%
 	echo.
 	for %%a in ("%~dp0/*.bmp") do (
 		REM eifviewer -p "%%a" -o "%%~na.eif" -d 8
-		eifviewer -p "%%a" -o "%%~na.eif" -s "%%a.pal" -d 16
+		eifviewer -p "%%a" -o "%%~na.eif" -d 16
 	)
 	echo Done
 	echo.

@@ -8,8 +8,8 @@ EXIT /B %ERRORLEVEL%
 	echo Repacking VBF... please wait
 	echo.
 	for %%a in ("*14C026*.vbf") do (
-		imgunpkr.exe -p -v "%%a" -c "%unpkDir%/_config.json"
-	ren patched.vbf %%a.patched
+		imgunpkr.exe -p -c "%unpkDir%/export_list.csv" -o "./" "%%a"
+		ren patched.vbf %%a.patched
 	)
 	echo.
 	echo Done
