@@ -9,12 +9,14 @@
 #include <EifConverter.h>
 #include <cxxopts.hpp>
 #include <csv.h>
+#include <CRC.h>
+
 
 static const char* ITEM_IDX = "Idx";
 static const char* ITEM_NAME = "Name";
 static const char* ITEM_WIDTH = "Width";
 static const char* ITEM_HEIGHT = "Height";
-static const char* ITEM_TYPE = "Type";
+static const char* ITEM_TYPE = "Depth";
 
 namespace fs = std::filesystem;
 
@@ -119,7 +121,9 @@ int UnpackImg(const fs::path& in_path, const fs::path& out_path) {
                 << ITEM_NAME << ","
                 << ITEM_TYPE << ","
                 << ITEM_WIDTH << ","
-                << ITEM_HEIGHT << std::endl;
+                << ITEM_HEIGHT << ","
+                << "palette_crc16"
+                << std::endl;
 
     int zip_items = img_sec.GetItemsCount(ImageSection::RT_ZIP);
 
@@ -155,12 +159,22 @@ int UnpackImg(const fs::path& in_path, const fs::path& out_path) {
         p.replace_extension(".bmp");
         EIF::EifConverter::eifToBmpFile(eif, p.string());
 
+        //fill csv row
+        string crc = "0";
         auto header_p = reinterpret_cast<EIF::EifBaseHeader*>(eif.data());
+        if(header_p->type == EIF_TYPE_MULTICOLOR) {
+            auto crc16 = CRC::Calculate((char*)eif.data()+0x10, 768, CRC::CRC_16_CCITTFALSE());
+            stringstream pal_crc;
+            pal_crc << hex << setw(4) << setfill('0') << uppercase << crc16;
+            crc = pal_crc.str();
+        }
+
         export_list << i << ","
             << file_stat.m_filename << ","
-            << ToString((image_type)header_p->type) << ","
+            << ToColorDepth((image_type)header_p->type) << ","
             << header_p->width << ","
-            << header_p->height
+            << header_p->height << ","
+            << crc
             << std::endl;
     }
 
@@ -175,7 +189,7 @@ int UnpackImg(const fs::path& in_path, const fs::path& out_path) {
         export_list << i << ","
                     << ttf_name << ","
                     << "TTF" << ","
-                    << 0 << ","  << 0 << std::endl;
+                    << 0 << ","  << 0 << "," << 0 << std::endl;
     }
 
     export_list.close();

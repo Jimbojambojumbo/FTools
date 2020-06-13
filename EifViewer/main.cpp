@@ -16,6 +16,7 @@ int main(int argc, char **argv)
 
         bool pack = false;
         bool unpack = false;
+        bool bulk = false;
         unsigned depth = 32;
 
         cxxopts::Options options("eifconverter", "Ford EDB.EIF converter");
@@ -25,6 +26,8 @@ int main(int argc, char **argv)
                 ("d,depth","Output Eif type 8/16/32", cxxopts::value<unsigned>(depth))
                 ("i,input","Input file", cxxopts::value<string>())
                 ("o,output","Output file", cxxopts::value<string>())
+                ("s,scheme","Color scheme file", cxxopts::value<string>())
+                ("B,bulk","Bulk mode", cxxopts::value<bool>(bulk))
                 ("h,help","Print help");
 
         options.parse_positional({"input"});
@@ -46,6 +49,13 @@ int main(int argc, char **argv)
             out_file_name = result["output"].as<string>();
         }
 
+        if(bulk) {
+
+            EIF::EifConverter::createMultipaletteEifs(input_file_name, out_file_name);
+
+            return 0;
+        }
+
         if(unpack) {
 
             if(out_file_name.empty()){
@@ -54,7 +64,12 @@ int main(int argc, char **argv)
 
             vector<uint8_t> v;
             FTUtils::fileToVector(input_file_name, v);
-            EIF::EifConverter::eifToBmpFile(v, out_file_name);
+
+            if(result.count("scheme")) {
+                EIF::EifConverter::eifToBmpFile(v, out_file_name,result["scheme"].as<string>());
+            } else {
+                EIF::EifConverter::eifToBmpFile(v, out_file_name);
+            }
 
         } else if(pack) {
 
@@ -67,7 +82,12 @@ int main(int argc, char **argv)
                 return 0;
             }
 
-            EIF::EifConverter::bmpFileToEifFile(input_file_name, depth, out_file_name);
+            if(depth == 16 && result.count("scheme")){
+                EIF::EifConverter::bmpFileToEifFile(input_file_name, depth, out_file_name,
+                                                    result["scheme"].as<string>());
+            } else {
+                EIF::EifConverter::bmpFileToEifFile(input_file_name, depth, out_file_name);
+            }
         }
     } catch (const cxxopts::OptionException& e){
         cout << "error parsing options: " << e.what() << endl;
