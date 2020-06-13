@@ -405,7 +405,7 @@ int EifImage32bit::openBmp(std::string file_name) {
 
             RGBApixel rgb_pixel = bmp_image.GetPixel(j,i);
 
-            bitmap_data[0 + 3 + i * width *4 + j*4] = rgb_pixel.Alpha;
+            bitmap_data[0 + 3 + i * width *4 + j*4] = 0xFF;
             bitmap_data[0 + 2 + i * width *4 + j*4] = rgb_pixel.Red;
             bitmap_data[0 + 1 + i * width *4 + j*4] = rgb_pixel.Green;
             bitmap_data[0 + 0 + i * width *4 + j*4] = rgb_pixel.Blue;
