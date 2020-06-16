@@ -276,7 +276,7 @@ int EifImage16bit::openBmp(std::string file_name) {
         pExq = exq_init();
         exq_no_transparency(pExq);
         exq_feed(pExq, (unsigned char *)pImage_data.data(), num_pixels);
-        exq_quantize_hq(pExq, EIF_MULTICOLOR_NUM_COLORS); //TODO: add param for fast mode
+        exq_quantize(pExq, EIF_MULTICOLOR_NUM_COLORS); //TODO: add param for fast mode
         exq_get_palette(pExq, pPalette, EIF_MULTICOLOR_NUM_COLORS);
         exq_map_image(pExq, num_pixels, (unsigned char *)pImage_data.data(), pOut.data());
         exq_free(pExq);
