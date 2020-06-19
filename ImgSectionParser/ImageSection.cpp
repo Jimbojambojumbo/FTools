@@ -93,29 +93,29 @@ void ImageSection::Parse(const vector<uint8_t> &bin_data) {
 }
 void ImageSection::HeaderToCsv(const string& csv_file_path) {
     std::ofstream export_list (csv_file_path);
-    export_list << H_WIDTH << ","
-            << H_HEIGHT << ","
-            << H_X << ","
-            << H_Y << ","
-            << H_TYPE << ","
-            << H_Z << ","
-            << H_U0 << ","
-            << H_U1 << ","
-            << H_U2 << ","
-            << H_U3 << ","
+    export_list << H_WIDTH << ";"
+            << H_HEIGHT << ";"
+            << H_X << ";"
+            << H_Y << ";"
+            << H_TYPE << ";"
+            << H_Z << ";"
+            << H_U0 << ";"
+            << H_U1 << ";"
+            << H_U2 << ";"
+            << H_U3 << ";"
             << H_U4 << endl;
 
     for(const auto& hr : m_header_data) {
-        export_list << hr.width << ","
-                << hr.height << ","
-                << hr.X << ","
-                << hr.Y << ","
-                << (int)hr.type << ","
-                << (int)hr.Z << ","
-                << (int)hr.unk0 << ","
-                << (int)hr.R << ","
-                << (int)hr.G << ","
-                << (int)hr.B << ","
+        export_list << hr.width << ";"
+                << hr.height << ";"
+                << hr.X << ";"
+                << hr.Y << ";"
+                << (int)hr.type << ";"
+                << (int)hr.Z << ";"
+                << (int)hr.unk0 << ";"
+                << (int)hr.R << ";"
+                << (int)hr.G << ";"
+                << (int)hr.B << ";"
                 << (int)hr.A << endl;
     }
     export_list.close();

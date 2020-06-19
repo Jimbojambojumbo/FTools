@@ -1,6 +1,8 @@
-Some documentation that explain where some EIF files are used (this is valid only for Ford Focus MK3.5 with LEVEL 3 IPC (restyle IPC)
+Documentation that explain where BMP files are used.
 
-C34xMCA_TOAnim_10 		= Background at the end of the splash screen
+flash_fade_in_001		= This is basic lower background that fill the whole screen. Only the TOP BAR and the BOTTOM BAR are visible, because the middle part is filled with other images. It's monochromatic
+
+C34xMCA_TOAnim_10 		= Background at the end of the splash screen.
 1CPicBackg_MCA 			= Full background when in Main menu.
 2EPicBackg_MCA 			= Middle+Right background when in Settings menu (always) and everywhere else but only when Show Vehicle is disabled.
 3FPicBackg_MCA 			= Middle side of the splitted view background.
