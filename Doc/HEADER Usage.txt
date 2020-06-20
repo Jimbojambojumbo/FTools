@@ -1,5 +1,5 @@
-Documentation that explain how HEADER elements are used.
-
+Documentation that explain where HEADER elements are used.
+Line 165	= 	"Info" Icon in MAIN menu
 Line 1044	=	First Frame of First Set of the bottom Left ODO 
 Line 1045	=	Second Frame of First Set of the bottom Left ODO
 Line 1046	=	Third Frame of First Set of the bottom Left ODO
