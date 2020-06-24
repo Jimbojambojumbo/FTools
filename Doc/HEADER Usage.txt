@@ -1,5 +1,128 @@
-Documentation that explain where HEADER elements are used.
+Documentation that explain where HEADER elements are used. Line 1 is the column name
+Line 2		=	Unknown
+Line 3		=	Unknown
+Line 4		=	Unknown
+Line 5		=	Unknown
+Line 6		=	Unknown
+Line 7		=	Unknown
+Line 8		=	Unknown
+Line 9		=	Unknown
+Line 10		=	Unknown
+Line 11		=	Unknown
+Line 12		=	Unknown
+Line 13		=	Unknown
+Line 14		=	External Temperature Frame 1
+Line 15		=	External Temperature Frame 2
+Line 16		=	Unknown
+Line 17		=	Unknown
+Line 18		=	Unknown
+Line 19		=	Unknown
+Line 20		=	Unknown
+Line 21		=	Unknown
+Line 22		=	Unknown
+Line 23		=	Unknown
+Line 24		=	Unknown
+Line 25		=	Unknown
+Line 26		=	Unknown
+Line 27		=	Unknown
+Line 28		=	Unknown
+Line 29		=	Unknown
+Line 30		=	Unknown
+Line 31		=	Unknown
+Line 32		=	Unknown
+Line 33		=	Unknown
+Line 34		=	Unknown
+Line 35		=	Unknown
+Line 36		=	Unknown
+Line 37		=	Unknown
+Line 38		=	Unknown
+Line 39		=	Unknown
+Line 40		=	Unknown
+Line 41		=	Unknown
+Line 42		=	Unknown
+
+
+Line 157	=	Unknown
+Line 158	=	Unknown
+Line 159	=	Unknown
+Line 160	=	"Trip 1" Icon in Main Menu
+Line 161	=	Arrow next to to Trip 1 text
+Line 162	=	"Trip 2" Icon in Main Menu
+Line 163	=	Arrow next to to Trip 2 text
+Line 164	=	"Trip 2" Text in Main Menu
 Line 165	= 	"Info" Icon in MAIN menu
+Line 166	=	Arrow next to to Info text
+Line 167	=	"Info" Text in Main Menu
+Line 168	=	"Trip 1" Text in Main Menu
+Line 169	=	Settings Icon in Main Menu
+Line 170	=	Arrow next to to Settings text
+Line 171	=	"Settings" text in Main Menu
+Line 172	=	Unknown
+Line 173	=	Unknown
+Line 174	=	Unknown
+Line 175	=	Unknown
+Line 176	=	Unknown
+Line 177	=	Upper icon in left bar when entered a submenu
+Line 178	=	Middle icon in left bar when entered a submenu
+Line 179	=	Lower icon in left bar when entered a submenu
+Line 180	=	Unknown
+Line 181	=	Unknown
+Line 182	=	Unknown
+Line 183	=	Unknown
+Line 184	=	Unknown
+Line 185	=	Unknown
+Line 186	=	Unknown
+Line 187	=	Unknown
+Line 188	=	Unknown
+Line 189	=	Unknown
+Line 190	=	Unknown
+Line 191	=	Unknown
+
+
+Line 669	=	Unknown
+Line 670	=	Unknown
+Line 671	=	Unknown
+Line 672	=	Unknown
+Line 673	=	Unknown
+Line 674	=	Unknown
+Line 675	=	Unknown
+Line 676	=	Unknown
+Line 677	=	Unknown
+Line 678	=	Unknown
+Line 679	=	Unknown
+Line 680	=	Unknown
+Line 681	=	Unknown
+
+
+Line 769	=	Unknown
+Line 770	=	Unknown
+Line 771	=	Unknown
+Line 772	=	Unknown
+Line 773	=	Unknown
+Line 774	=	Unknown
+Line 775	=	Unknown
+Line 776	=	Unknown
+Line 777	=	Unknown
+Line 778	=	Unknown
+Line 779	=	Unknown
+Line 780	=	Unknown
+
+
+Line 994	=	Unknown
+Line 995	=	Unknown
+Line 996	=	Unknown
+Line 997	=	Unknown
+Line 998	=	Unknown
+Line 999	=	Unknown
+Line 1000	=	Unknown
+Line 1001	=	Unknown
+Line 1002	=	Unknown
+Line 1003	=	Unknown
+Line 1004	=	Unknown
+Line 1005	=	Unknown
+Line 1006	=	Unknown
+Line 1007	=	Unknown
+
 Line 1044	=	First Frame of First Set of the bottom Left ODO 
 Line 1045	=	Second Frame of First Set of the bottom Left ODO
 Line 1046	=	Third Frame of First Set of the bottom Left ODO
@@ -7,3 +130,30 @@ Line 1046	=	Third Frame of First Set of the bottom Left ODO
 Line 1496	=	First Frame of Second Set of the bottom Left ODO 
 Line 1497	=	Second Frame of Second Set of the bottom Left ODO
 Line 1498	=	Third Frame of Second Set of the bottom Left ODO
+
+Line 1756	=	Unknown
+Line 1757	=	Unknown
+Line 1758	=	Unknown
+Line 1759	=	Unknown
+Line 1760	=	Unknown
+Line 1761	=	Unknown
+Line 1762	=	Unknown
+Line 1763	=	Unknown
+Line 1764	=	Unknown
+Line 1765	=	Unknown
+Line 1766	=	Unknown
+Line 1767	=	Unknown
+Line 1768	=	Unknown
+Line 1769	=	Unknown
+Line 1770	=	Unknown
+Line 1771	=	Unknown
+
+
+
+
+
+
+
+
+
+
