@@ -2,7 +2,6 @@
 // Created by bigun on 12/23/2018.
 //
 #include <iostream>
-#include <vector>
 #include <cxxopts.hpp>
 #include <utils.h>
 
@@ -17,17 +16,17 @@ int main(int argc, char **argv)
         bool pack = false;
         bool unpack = false;
         bool bulk = false;
-        unsigned depth = 32;
+        unsigned depth = 0;
 
         cxxopts::Options options("eifconverter", "Ford EDB.EIF converter");
         options.add_options()
-                ("p,pack","Pack EIF file", cxxopts::value<bool>(pack))
-                ("u,unpack","Unpack EIF file", cxxopts::value<bool>(unpack))
+                ("P,pack","Pack EIF file", cxxopts::value<bool>(pack))
+                ("U,unpack","Unpack EIF file", cxxopts::value<bool>(unpack))
+                ("B,bulk","Bulk mode. Create shared palette for images set", cxxopts::value<bool>(bulk))
                 ("d,depth","Output Eif type 8/16/32", cxxopts::value<unsigned>(depth))
                 ("i,input","Input file", cxxopts::value<string>())
                 ("o,output","Output file", cxxopts::value<string>())
-                ("s,scheme","Color scheme file", cxxopts::value<string>())
-                ("B,bulk","Bulk mode", cxxopts::value<bool>(bulk))
+                ("s,scheme","(optional) Use external palette when unpack and pack", cxxopts::value<string>())
                 ("h,help","Print help");
 
         options.parse_positional({"input"});
@@ -42,52 +41,34 @@ int main(int argc, char **argv)
             cout << "Please, specify input file" << std::endl;
             return 0;
         }
-        auto input_file_name = result["input"].as<string>();
-
-        string out_file_name;
+        fs::path input_file_name(result["input"].as<string>());
+        fs::path palette_file_name(result.count("scheme") ? result["scheme"].as<string>() : "");
+        fs::path out_file_name;
         if(result.count("output")){
             out_file_name = result["output"].as<string>();
+        } else {
+            out_file_name = input_file_name;
+            out_file_name = ((unpack) ? out_file_name.replace_extension(".bmp") :
+                             out_file_name.replace_extension( ".eif"));
         }
 
         if(bulk) {
 
-            EIF::EifConverter::createMultipaletteEifs(input_file_name, out_file_name);
+            EIF::EifConverter::bulkPack(input_file_name, out_file_name);
 
-            return 0;
-        }
+        } else if(unpack) {
 
-        if(unpack) {
-
-            if(out_file_name.empty()){
-                out_file_name = input_file_name + ".bmp";
-            }
-
-            vector<uint8_t> v;
-            FTUtils::fileToVector(input_file_name, v);
-
-            if(result.count("scheme")) {
-                EIF::EifConverter::eifToBmpFile(v, out_file_name,result["scheme"].as<string>());
-            } else {
-                EIF::EifConverter::eifToBmpFile(v, out_file_name);
-            }
+            auto v = FTUtils::fileToVector(input_file_name);
+            EIF::EifConverter::eifToBmpFile(v, out_file_name, palette_file_name);
 
         } else if(pack) {
-
-            if(out_file_name.empty()){
-                out_file_name = input_file_name + ".eif";
-            }
 
             if(depth != 8 && depth != 16 && depth != 32) {
                 cout << "Incorrect color depth value. It's may be only 8|16|32" << std::endl;
                 return 0;
             }
 
-            if(depth == 16 && result.count("scheme")){
-                EIF::EifConverter::bmpFileToEifFile(input_file_name, depth, out_file_name,
-                                                    result["scheme"].as<string>());
-            } else {
-                EIF::EifConverter::bmpFileToEifFile(input_file_name, depth, out_file_name);
-            }
+            EIF::EifConverter::bmpFileToEifFile(input_file_name, depth, out_file_name, palette_file_name);
         }
     } catch (const cxxopts::OptionException& e){
         cout << "error parsing options: " << e.what() << endl;
