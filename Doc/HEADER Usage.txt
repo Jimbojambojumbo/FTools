@@ -79,6 +79,7 @@ Line 190	=	Unknown
 Line 191	=	Unknown
 
 Line 249	=	Average fuel unit icon on trip computer page witn 'vehicle display' setting ON
+Line 250	=	Quadrant divider
 
 Line 255	=	Upper left icon on trip computer page which contain 4 indicators
 Line 256	=	Upper right icon on trip computer page which contain 4 indicators
@@ -133,6 +134,9 @@ Line 1044	=	First Frame of First Set of the bottom Left ODO
 Line 1045	=	Second Frame of First Set of the bottom Left ODO
 Line 1046	=	Third Frame of First Set of the bottom Left ODO
 
+Line 1322	=	120KM/h Speed Warning
+
+Line 1496	=	Temperature Scale (°C / °F)
 Line 1496	=	First Frame of Second Set of the bottom Left ODO 
 Line 1497	=	Second Frame of Second Set of the bottom Left ODO
 Line 1498	=	Third Frame of Second Set of the bottom Left ODO
