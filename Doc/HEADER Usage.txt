@@ -134,6 +134,8 @@ Line 1044	=	First Frame of First Set of the bottom Left ODO
 Line 1045	=	Second Frame of First Set of the bottom Left ODO
 Line 1046	=	Third Frame of First Set of the bottom Left ODO
 
+Line 1149	=	Deeper Background (top / bottom bars)
+
 Line 1322	=	120KM/h Speed Warning
 
 Line 1496	=	Temperature Scale (°C / °F)

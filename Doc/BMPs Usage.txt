@@ -1,6 +1,6 @@
 Documentation that explain where BMP files are used.
 
-flash_fade_in_001		= This is basic lower background that fill the whole screen. Only the TOP BAR and the BOTTOM BAR are visible, because the middle part is filled with other images. It's monochromatic
+flash_fade_in_001		= This is deeper background that fill the whole screen. Only the TOP BAR and the BOTTOM BAR are visible, because the middle part is filled with other images. It's monochromatic
 
 C34xMCA_TOAnim_10 		= Background at the end of the splash screen.
 1CPicBackg_MCA 			= Full background when in Main menu.
