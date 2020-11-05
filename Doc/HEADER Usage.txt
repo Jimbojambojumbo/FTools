@@ -21,7 +21,7 @@ Line 20		=	Unknown
 Line 21		=	Unknown
 Line 22		=	Unknown
 Line 23		=	Unknown
-Line 24		=	Unknown
+Line 24		=	Auto High Beam Icon (NEED TEST!)
 Line 25		=	Unknown
 Line 26		=	Unknown
 Line 27		=	Unknown
@@ -32,8 +32,8 @@ Line 31		=	Unknown
 Line 32		=	Unknown
 Line 33		=	Unknown
 Line 34		=	Unknown
-Line 35		=	Unknown
-Line 36		=	Unknown
+Line 35		=	Car Pic in Alarm Screen
+Line 36		=	Divider in Alarm Screen
 Line 37		=	Unknown
 Line 38		=	Unknown
 Line 39		=	Unknown
@@ -86,6 +86,8 @@ Line 256	=	Upper right icon on trip computer page which contain 4 indicators
 Line 257	=	Lower left icon on trip computer page which contain 4 indicators
 Line 258	=	Lower right icon on trip computer page which contain 4 indicators
 
+Line 446	=	6 Levels Brightness Indicator (all pics)
+
 Line 669	=	Unknown
 Line 670	=	Unknown
 Line 671	=	Unknown
@@ -137,17 +139,18 @@ Line 1046	=	Third Frame of First Set of the bottom Left ODO
 Line 1149	=	Deeper Background (top / bottom bars)
 
 Line 1322	=	120KM/h Speed Warning
+Line 1332	=	12 Levels Brightness Indicator (all pics)
 
-Line 1496	=	Temperature Scale (°C / °F)
+Line 1495	=	Temperature Scale (°C / °F)
 Line 1496	=	First Frame of Second Set of the bottom Left ODO 
 Line 1497	=	Second Frame of Second Set of the bottom Left ODO
 Line 1498	=	Third Frame of Second Set of the bottom Left ODO
 
-Line 1503	=	Average fuel icon on trip computer page witn 'vehicle display' setting ON
+Line 1503	=	Average fuel icon on trip computer page with 'vehicle display' setting ON
 
-Line 1531	=	Average fuel unit icon on trip computer page witn 'vehicle display' setting OFF
+Line 1531	=	Average fuel unit icon on trip computer page with 'vehicle display' setting OFF
 
-Line 1545	=	Average fuel icon on trip computer page witn 'vehicle display' setting OFF
+Line 1545	=	Average fuel icon on trip computer page with 'vehicle display' setting OFF
 
 Line 1756	=	Unknown
 Line 1757	=	Unknown
