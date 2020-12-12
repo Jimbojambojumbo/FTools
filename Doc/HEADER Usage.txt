@@ -1,8 +1,8 @@
-Documentation that explain where HEADER elements are used. Line 1 is the column name
+Documentation that explain where HEADER elements are used. Line 1 is the column name. Please beware that lines might be slightly differente based on calibration version.
 Line 2		=	Unknown
 Line 3		=	Unknown
-Line 4		=	Unknown
-Line 5		=	Unknown
+Line 4		=	Up and down shift arrow
+Line 5		=	Gear number
 Line 6		=	Unknown
 Line 7		=	Unknown
 Line 8		=	Unknown
@@ -15,9 +15,9 @@ Line 14		=	External Temperature Frame 1
 Line 15		=	External Temperature Frame 2
 Line 16		=	Unknown
 Line 17		=	Unknown
-Line 18		=	Unknown
-Line 19		=	Unknown
-Line 20		=	Unknown
+Line 18		=	Lim speed indication 35-50-65-80-95-110-125-140-155
+Line 19		=	Lim speed indication 40-55-70-85-100-115-130-145-160
+Line 20		=	Lim speed indication 30-45-60-75-90-105-120-135-150
 Line 21		=	Unknown
 Line 22		=	Unknown
 Line 23		=	Unknown
@@ -40,7 +40,6 @@ Line 39		=	Unknown
 Line 40		=	Unknown
 Line 41		=	Unknown
 Line 42		=	Unknown
-
 
 Line 157	=	Unknown
 Line 158	=	Unknown
@@ -86,6 +85,8 @@ Line 256	=	Upper right icon on trip computer page which contain 4 indicators
 Line 257	=	Lower left icon on trip computer page which contain 4 indicators
 Line 258	=	Lower right icon on trip computer page which contain 4 indicators
 
+Line 335	=	Lim indicator(text lim)
+
 Line 446	=	6 Levels Brightness Indicator (all pics)
 
 Line 669	=	Unknown
@@ -102,7 +103,6 @@ Line 679	=	Unknown
 Line 680	=	Unknown
 Line 681	=	Unknown
 
-
 Line 769	=	Unknown
 Line 770	=	Unknown
 Line 771	=	Unknown
@@ -115,7 +115,6 @@ Line 777	=	Unknown
 Line 778	=	Unknown
 Line 779	=	Unknown
 Line 780	=	Unknown
-
 
 Line 994	=	Unknown
 Line 995	=	Unknown
@@ -168,13 +167,3 @@ Line 1768	=	Unknown
 Line 1769	=	Unknown
 Line 1770	=	Unknown
 Line 1771	=	Unknown
-
-
-
-
-
-
-
-
-
-
