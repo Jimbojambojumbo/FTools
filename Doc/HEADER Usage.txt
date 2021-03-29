@@ -150,7 +150,7 @@ Line 1503	=	Average fuel icon on trip computer page with 'vehicle display' setti
 Line 1531	=	Average fuel unit icon on trip computer page with 'vehicle display' setting OFF
 
 Line 1545	=	Average fuel icon on trip computer page with 'vehicle display' setting OFF
-
+Line 1634 = Drive Mode Normal (RS Model)
 Line 1756	=	Unknown
 Line 1757	=	Unknown
 Line 1758	=	Unknown
